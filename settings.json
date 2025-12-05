@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "permissions": {
+    "deny": [
+      "Read(./.claude/skills/*/node_modules/**)",
+      "Read(./.claude/skills/*/scripts/node_modules/**)"
+    ],
+    "defaultMode": "acceptEdits"
+  },
+  "model": "opus",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/state-tracker.sh session-start",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/state-tracker.sh user-prompt",
+            "timeout": 1
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/state-tracker.sh pre-tool",
+            "timeout": 1
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/state-tracker.sh post-tool",
+            "timeout": 1
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/state-tracker.sh stop",
+            "timeout": 1
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/state-tracker.sh notification",
+            "timeout": 1
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-script.sh"
+  },
+  "alwaysThinkingEnabled": true,
+  "mcpServers": {
+    "docker-mcp": {
+      "command": "docker.exe",
+      "args": [
+        "mcp",
+        "gateway",
+        "run",
+        "--transport",
+        "stdio"
+      ]
+    },
+    "browser": {
+      "command": "/home/matt/projects/TabzChrome/browser-mcp-server/run-windows.sh",
+      "args": [],
+      "env": {
+        "BACKEND_URL": "http://localhost:8129"
+      }
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "shadcn@latest",
+        "mcp"
+      ]
+    }
+  },
+  "theme": "dark",
+  "textStyle": 1,
+  "$comment": "Add this 'hooks' section to your ~/.claude/settings.json file",
+  "enabledPlugins": {
+    "databases@claudekit-skills-marketplace": true
+  }
+}

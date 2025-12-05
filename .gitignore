@@ -1,0 +1,27 @@
+# Credentials & secrets
+.credentials.json
+.claude.json
+settings.local.json
+
+# Large generated directories
+debug/
+file-history/
+history.jsonl
+session-env/
+shell-snapshots/
+todos/
+plans/
+statsig/
+projects/
+
+# Local/machine-specific
+ide/
+local/
+plugins/
+powerline/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.coverage
