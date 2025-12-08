@@ -1,0 +1,8 @@
+{
+  "name": "my-gg-plugins",
+  "version": "1.0.0",
+  "description": "Official GGPrompts component library - curated Claude Code skills, commands, and agents",
+  "homepage": "https://ggprompts.com/claude-code",
+  "repository": "https://github.com/ggggggggg/my-gg-plugins",
+  "keywords": ["ggprompts", "claude-code", "skills", "commands", "agents"]
+}
