@@ -1,4 +1,5 @@
 {
+  "$schema": "https://cdn.anthropic.com/schemas/claude-code/marketplace-plugin.schema.json",
   "name": "my-gg-plugins",
   "version": "1.0.0",
   "description": "Personal Claude Code toolkit curated from GGPrompts",
@@ -11,7 +12,7 @@
       "name": "ui-styling",
       "description": "Create beautiful, accessible user interfaces with shadcn/ui components, Tailwind CSS, and canvas-based visual designs",
       "version": "1.0.0",
-      "source": "./skills/ui-styling",
+      "source": "./plugins/ui-styling",
       "strict": false,
       "keywords": ["ui", "tailwind", "shadcn", "design"]
     },
@@ -19,7 +20,7 @@
       "name": "skill-creator",
       "description": "Guide for creating effective skills that extend Claude's capabilities with specialized knowledge and workflows",
       "version": "1.0.0",
-      "source": "./skills/skill-creator",
+      "source": "./plugins/skill-creator",
       "strict": false,
       "keywords": ["meta", "skills", "development"]
     },
@@ -27,7 +28,7 @@
       "name": "bubbletea",
       "description": "Build terminal user interfaces with Go and Bubbletea framework - TUI apps, Elm architecture, Lipgloss styling",
       "version": "1.0.0",
-      "source": "./skills/bubbletea",
+      "source": "./plugins/bubbletea",
       "strict": false,
       "keywords": ["go", "tui", "terminal", "bubbletea"]
     },
@@ -35,7 +36,7 @@
       "name": "agent-creator",
       "description": "Guide for creating effective Claude Code agents with system prompts, tool restrictions, and MCP integrations",
       "version": "1.0.0",
-      "source": "./skills/agent-creator",
+      "source": "./plugins/agent-creator",
       "strict": false,
       "keywords": ["meta", "agents", "development"]
     },
@@ -43,7 +44,7 @@
       "name": "docker-mcp",
       "description": "Comprehensive guide for Docker MCP Toolkit - discover and use ~170 MCP servers on-demand",
       "version": "1.0.0",
-      "source": "./skills/docker-mcp",
+      "source": "./plugins/docker-mcp",
       "strict": false,
       "keywords": ["mcp", "docker", "integrations"]
     },
@@ -51,7 +52,7 @@
       "name": "xterm-js",
       "description": "Battle-tested patterns for xterm.js terminal implementations and React-based terminal applications",
       "version": "1.0.0",
-      "source": "./skills/xterm-js",
+      "source": "./plugins/xterm-js",
       "strict": false,
       "keywords": ["terminal", "xterm", "react", "websocket"]
     },
@@ -59,7 +60,7 @@
       "name": "ai-multimodal",
       "description": "Process multimedia with Google Gemini - audio analysis, image understanding, video processing, document extraction",
       "version": "1.0.0",
-      "source": "./skills/ai-multimodal",
+      "source": "./plugins/ai-multimodal",
       "strict": false,
       "keywords": ["gemini", "multimodal", "audio", "video", "images"]
     },
@@ -67,7 +68,7 @@
       "name": "docs-seeker",
       "description": "Search for technical documentation using llms.txt standard, GitHub repos via Repomix, and parallel exploration",
       "version": "1.0.0",
-      "source": "./skills/docs-seeker",
+      "source": "./plugins/docs-seeker",
       "strict": false,
       "keywords": ["documentation", "search", "llms-txt"]
     },
@@ -75,7 +76,7 @@
       "name": "web-frameworks",
       "description": "Build full-stack web apps with Next.js App Router, Turborepo monorepos, and RemixIcon",
       "version": "1.0.0",
-      "source": "./skills/web-frameworks",
+      "source": "./plugins/web-frameworks",
       "strict": false,
       "keywords": ["nextjs", "react", "turborepo", "web"]
     },
@@ -83,7 +84,7 @@
       "name": "canvas-design",
       "description": "Create beautiful visual art in PNG and PDF using design philosophy - posters, artwork, static designs",
       "version": "1.0.0",
-      "source": "./skills/canvas-design",
+      "source": "./plugins/canvas-design",
       "strict": false,
       "keywords": ["design", "canvas", "art", "visual"]
     },
@@ -91,7 +92,7 @@
       "name": "problem-solving",
       "description": "Collection of problem-solving techniques: meta-pattern recognition, collision-zone thinking, scale game, inversion",
       "version": "1.1.0",
-      "source": "./skills/problem-solving",
+      "source": "./plugins/problem-solving",
       "strict": false,
       "keywords": ["thinking", "problem-solving", "techniques"]
     },
@@ -99,7 +100,7 @@
       "name": "debugging",
       "description": "Systematic debugging skills: root cause tracing, defense-in-depth validation, verification before completion",
       "version": "2.1.0",
-      "source": "./skills/debugging",
+      "source": "./plugins/debugging",
       "strict": false,
       "keywords": ["debugging", "troubleshooting", "verification"]
     },
@@ -107,7 +108,7 @@
       "name": "prompt-engineer",
       "description": "Interactive prompt refinement with best practices and clipboard copy",
       "version": "1.0.0",
-      "source": "./commands/prompt-engineer.md",
+      "source": "./plugins/prompt-engineer",
       "strict": false,
       "keywords": ["prompts", "engineering", "interactive"]
     },
@@ -115,7 +116,7 @@
       "name": "handoff",
       "description": "Generate a handoff summary and copy to clipboard for continuing in new sessions",
       "version": "1.0.0",
-      "source": "./commands/handoff.md",
+      "source": "./plugins/handoff",
       "strict": false,
       "keywords": ["workflow", "handoff", "context"]
     },
@@ -123,7 +124,7 @@
       "name": "wipe",
       "description": "Generate handoff, clear context, and auto-continue in fresh session",
       "version": "1.0.0",
-      "source": "./commands/wipe.md",
+      "source": "./plugins/wipe",
       "strict": false,
       "keywords": ["workflow", "context", "reset"]
     },
@@ -131,7 +132,7 @@
       "name": "gemini",
       "description": "Query Google Gemini for root cause analysis (read-only, no edits)",
       "version": "1.0.0",
-      "source": "./commands/gemini.md",
+      "source": "./plugins/gemini",
       "strict": false,
       "keywords": ["gemini", "analysis", "debugging"]
     },
@@ -139,7 +140,7 @@
       "name": "codex",
       "description": "Query OpenAI Codex for root cause analysis (read-only, no edits)",
       "version": "1.0.0",
-      "source": "./commands/codex.md",
+      "source": "./plugins/codex",
       "strict": false,
       "keywords": ["codex", "analysis", "debugging"]
     },
@@ -147,7 +148,7 @@
       "name": "validate-plan",
       "description": "Project Plan Validation & Enrichment System",
       "version": "1.0.0",
-      "source": "./commands/validate-plan.md",
+      "source": "./plugins/validate-plan",
       "strict": false,
       "keywords": ["planning", "validation", "workflow"]
     },
@@ -155,7 +156,7 @@
       "name": "pmux",
       "description": "Interactive Prompt Engineer with tmux send-keys - directly send prompts to Claude Code sessions",
       "version": "1.0.0",
-      "source": "./commands/pmux.md",
+      "source": "./plugins/pmux",
       "strict": false,
       "keywords": ["tmux", "prompts", "interactive"]
     },
@@ -163,7 +164,7 @@
       "name": "pmux2",
       "description": "Interactive Prompt Engineer with tmux send-keys - v2 with improvements",
       "version": "1.0.0",
-      "source": "./commands/pmux2.md",
+      "source": "./plugins/pmux2",
       "strict": false,
       "keywords": ["tmux", "prompts", "interactive"]
     },
@@ -171,7 +172,7 @@
       "name": "mcp-manager",
       "description": "Manage MCP server integrations - discover tools/prompts/resources, analyze relevance, execute capabilities",
       "version": "1.0.0",
-      "source": "./agents/mcp-manager.md",
+      "source": "./plugins/mcp-manager",
       "strict": false,
       "keywords": ["mcp", "agents", "integrations"]
     }

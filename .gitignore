@@ -17,7 +17,6 @@ projects/
 # Local/machine-specific
 ide/
 local/
-plugins/
 powerline/
 
 # Python
